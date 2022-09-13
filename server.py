@@ -13,7 +13,10 @@ def root():
 def sentiment():
     return render_template("sentiment.html")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0e4d0762205d27b0992b163d46df2a43ebb6e4f
 @app.route('/predict', methods=["POST"])
 def predict():
     q1 = int(request.form['a1'])
@@ -44,4 +47,4 @@ def predict():
     return render_template("result.html", result=result)
 
 app.secret_key = os.urandom(12)
-app.run(port=5987, host='0.0.0.0', debug=True)
+app.run(port=17995, host='0.0.0.0', debug=True)
