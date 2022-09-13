@@ -73,7 +73,7 @@ class Model:
     def accuracy(self,model):
         predictions = model.predict(self.x_test)
         cm = confusion_matrix(self.y_test, predictions)
-        accuracy = (cm[0][0] + cm[1][1]) / (cm[0][0] + cm[0][1] + cm[1][0] + cm[1][1])
+        accuracy = (cm[0][0] + cm[1][1]) / (cm[0][0] + cm[0][1] + cm[1][0] + cm[1][1]) ## True predicted data / all data 
         print(f"{self.name} has accuracy of {accuracy *100} % ")
 
 if __name__ == '__main__':

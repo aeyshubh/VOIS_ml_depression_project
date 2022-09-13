@@ -9,33 +9,10 @@ app = Flask(__name__)
 def root():
         return render_template('index.html')
 
-
-""" @app.route('/login', methods=['POST'])
-def do_admin_login():
-    if request.form['password'] == 'admin' and request.form['username'] == 'admin':
-        session['logged_in'] = True
-    else :
-        flash('wrong password!')
-    return root()
-
-@app.route("/logout")
-def logout():
-    session['logged_in'] = False
-    return root()
-
- """
 @app.route("/sentiment")
 def sentiment():
     return render_template("sentiment.html")
 
-""" 
-@app.route("/predictSentiment", methods=["POST"])
-def predictSentiment():
-    message = request.form['form10']
-    pm = process_message(message)
-    result = DepressionDetection.classify(pm, 'bow') or DepressionDetection.classify(pm, 'tf-idf')
-    return render_template("tweetresult.html",result=result)
- """
 
 @app.route('/predict', methods=["POST"])
 def predict():
